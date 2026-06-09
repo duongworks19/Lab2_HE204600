@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
+import { FaShoppingCart, FaCheckCircle } from 'react-icons/fa';
 
 function ProductCard({ product, onAddToCart }) {
     const { image, name, price, status, description } = product;
@@ -46,8 +47,10 @@ function ProductCard({ product, onAddToCart }) {
                     disabled={!isInStock || added}
                     onClick={handleAddToCart}
                 >
-                    <i className={`bi ${added ? 'bi-check-circle' : 'bi-cart-plus'} me-2`}></i>
-                    {!isInStock ? 'Out of Stock' : added ? 'Added to Cart!' : 'Add to Cart'}
+                    {added
+                        ? <><FaCheckCircle className="me-2" />Added to Cart!</>
+                        : <><FaShoppingCart className="me-2" />{isInStock ? 'Add to Cart' : 'Out of Stock'}</>
+                    }
                 </Button>
             </div>
         </div>
@@ -55,4 +58,3 @@ function ProductCard({ product, onAddToCart }) {
 }
 
 export default ProductCard;
-
