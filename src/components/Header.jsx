@@ -29,7 +29,6 @@ function Navbars({ cartCount = 0 }) {
                                 <Nav.Link href="#women" className="me-2">Women</Nav.Link>
                                 <Nav.Link href="#contact" className="me-3">Contact</Nav.Link>
 
-                                {/* Search */}
                                 <Form className="d-flex me-2">
                                     <Form.Control
                                         type="search"
@@ -39,7 +38,6 @@ function Navbars({ cartCount = 0 }) {
                                     />
                                 </Form>
 
-                                {/* Cart button with Badge */}
                                 <Button variant="danger" size="sm" className="d-flex align-items-center gap-1 position-relative">
                                     <FaShoppingCart />
                                     <span className="ms-1">Cart</span>

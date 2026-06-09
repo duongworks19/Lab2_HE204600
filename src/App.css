@@ -1,19 +1,11 @@
-/* ============================================
-   Global App Styles + Premium Banner
-   ============================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
 
-/* ── Reset ── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-/* ════════════════════════════════
-   NAVBAR ENHANCEMENTS
-   ════════════════════════════════ */
-
-/* Nav link hover underline slide effect */
 .navbar .nav-link {
     position: relative;
     transition: color 0.25s ease;
@@ -39,23 +31,19 @@
     color: #fff !important;
 }
 
-/* ════════════════════════════════
-   BANNER WRAPPER
-   ════════════════════════════════ */
+
 
 .banner-wrapper {
     width: 100%;
     font-family: 'Inter', sans-serif;
 }
 
-/* Rounded bottom corners on the carousel */
 .promo-carousel,
 .banner-wrapper .carousel {
     border-radius: 0 0 24px 24px;
     overflow: hidden;
 }
 
-/* ── Each slide: full-width background image ── */
 .banner-slide {
     position: relative;
     width: 100%;
@@ -65,24 +53,19 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    /* subtle scale on slide transition */
     transition: transform 0.6s ease;
 }
 
-/* ── Dark gradient overlay ── */
 .banner-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        105deg,
-        rgba(8, 8, 18, 0.85) 0%,
-        rgba(8, 8, 18, 0.50) 50%,
-        rgba(8, 8, 18, 0.08) 100%
-    );
+    background: linear-gradient(105deg,
+            rgba(8, 8, 18, 0.85) 0%,
+            rgba(8, 8, 18, 0.50) 50%,
+            rgba(8, 8, 18, 0.08) 100%);
     z-index: 1;
 }
 
-/* ── Content block ── */
 .banner-content {
     position: relative;
     z-index: 2;
@@ -92,11 +75,17 @@
 }
 
 @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-48px); }
-    to   { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-48px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* ── Badge / pill ── */
 .promo-badge {
     display: inline-block;
     padding: 5px 18px;
@@ -108,7 +97,6 @@
     margin-bottom: 18px;
     background: #e63946;
     color: #fff;
-    /* hover: slight glow */
     transition: box-shadow 0.25s ease, transform 0.2s ease;
     cursor: default;
 }
@@ -134,7 +122,6 @@
     box-shadow: 0 0 14px rgba(255, 107, 53, 0.7);
 }
 
-/* ── Title ── */
 .banner-title {
     font-size: clamp(2rem, 4.5vw, 3.4rem);
     font-weight: 900;
@@ -142,28 +129,26 @@
     line-height: 1.15;
     margin-bottom: 16px;
     letter-spacing: -0.02em;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ── Description ── */
 .banner-desc {
     font-size: clamp(0.88rem, 1.8vw, 1.05rem);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.75;
     margin-bottom: 32px;
     max-width: 440px;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* ── CTA Button ── */
 .banner-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 13px 34px;
     border-radius: 50px;
-    border: 2px solid rgba(255,255,255,0.9);
-    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(4px);
     color: #ffffff;
     font-size: 0.9rem;
@@ -200,7 +185,6 @@
     box-shadow: 0 10px 28px rgba(230, 57, 70, 0.5);
 }
 
-/* Arrow slides right on hover */
 .btn-arrow {
     font-size: 1.1rem;
     transition: transform 0.25s ease;
@@ -211,11 +195,6 @@
     transform: translateX(6px);
 }
 
-/* ════════════════════════════════
-   CAROUSEL CONTROLS
-   ════════════════════════════════ */
-
-/* Indicator pill dots */
 .promo-carousel .carousel-indicators {
     bottom: 20px;
     gap: 6px;
@@ -238,7 +217,6 @@
     border-radius: 100px;
 }
 
-/* Prev / Next arrow buttons */
 .promo-carousel .carousel-control-prev,
 .promo-carousel .carousel-control-next {
     width: 46px;
@@ -246,7 +224,7 @@
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(8px);
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     top: 50%;
     transform: translateY(-50%);
     margin: 0 20px;
@@ -260,25 +238,25 @@
 }
 
 .promo-carousel .carousel-control-prev:hover {
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-50%) scale(1.1);
 }
 
 .promo-carousel .carousel-control-next:hover {
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-50%) scale(1.1);
 }
 
-/* ════════════════════════════════
-   RESPONSIVE
-   ════════════════════════════════ */
-
 @media (max-width: 992px) {
-    .banner-slide { height: 440px; }
+    .banner-slide {
+        height: 440px;
+    }
 }
 
 @media (max-width: 768px) {
-    .banner-slide { height: 380px; }
+    .banner-slide {
+        height: 380px;
+    }
 
     .banner-overlay {
         background: rgba(8, 8, 18, 0.65);
@@ -291,7 +269,9 @@
         align-items: center;
     }
 
-    .banner-desc { max-width: 100%; }
+    .banner-desc {
+        max-width: 100%;
+    }
 
     .promo-carousel,
     .banner-wrapper .carousel {
@@ -300,7 +280,9 @@
 }
 
 @media (max-width: 480px) {
-    .banner-slide { height: 300px; }
+    .banner-slide {
+        height: 300px;
+    }
 
     .banner-btn {
         padding: 10px 24px;
@@ -308,9 +290,6 @@
     }
 }
 
-/* ════════════════════════════════
-   PRODUCT SECTION
-   ════════════════════════════════ */
 
 .product-section {
     padding: 64px 48px;
@@ -344,7 +323,6 @@
     margin: 0 auto;
 }
 
-/* ── Grid ── */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -353,13 +331,12 @@
     margin: 0 auto;
 }
 
-/* ── Card ── */
 .product-card {
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.28s ease, box-shadow 0.28s ease;
     display: flex;
     flex-direction: column;
@@ -367,10 +344,9 @@
 
 .product-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.13);
 }
 
-/* Status badge */
 .product-status-badge {
     position: absolute;
     top: 14px;
@@ -378,7 +354,6 @@
     z-index: 2;
 }
 
-/* Image wrapper with overlay */
 .product-img-wrap {
     position: relative;
     overflow: hidden;
@@ -397,7 +372,6 @@
     transform: scale(1.07);
 }
 
-/* Quick view overlay */
 .product-img-overlay {
     position: absolute;
     inset: 0;
@@ -432,7 +406,6 @@
     color: #1a1a2e;
 }
 
-/* Info area */
 .product-info {
     padding: 18px 20px 20px;
     display: flex;
@@ -473,7 +446,6 @@
     color: #9ca3af;
 }
 
-/* Add to Cart button */
 .product-btn {
     width: 100%;
     border-radius: 10px !important;
@@ -487,10 +459,9 @@
 
 .product-btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* ── Responsive Grid ── */
 @media (max-width: 992px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -507,10 +478,6 @@
     }
 }
 
-/* ════════════════════════════════
-   FOOTER
-   ════════════════════════════════ */
-
 .site-footer {
     background: #12121e;
     color: #c9c9d3;
@@ -518,10 +485,9 @@
     margin-top: auto;
 }
 
-/* ── Top navbar strip ── */
 .footer-top-bar {
     background: #1a1a2e !important;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     padding: 12px 0;
 }
 
@@ -539,7 +505,6 @@
     letter-spacing: 0.08em;
 }
 
-/* ── Main content area ── */
 .footer-main {
     padding: 48px 24px 40px;
 }
@@ -562,7 +527,6 @@
     margin-bottom: 20px;
 }
 
-/* Social icon buttons */
 .footer-socials {
     display: flex;
     gap: 10px;
@@ -576,20 +540,19 @@
     align-items: center;
     justify-content: center;
     border-radius: 50% !important;
-    border-color: rgba(255,255,255,0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
     color: #c9c9d3 !important;
     transition: background 0.25s, border-color 0.25s, transform 0.2s !important;
     font-size: 0.9rem;
 }
 
 .footer-social-btn:hover {
-    background: rgba(255,255,255,0.12) !important;
-    border-color: rgba(255,255,255,0.5) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
     color: #fff !important;
     transform: translateY(-2px);
 }
 
-/* Quick links */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -612,7 +575,6 @@
     padding-left: 6px;
 }
 
-/* Student info list */
 .footer-info-list {
     list-style: none;
     padding: 0;
@@ -660,10 +622,9 @@
     text-decoration: underline;
 }
 
-/* ── Bottom bar ── */
 .footer-bottom {
     background: #0d0d1a;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding: 16px 0;
     font-size: 0.8rem;
     color: #6b7280;

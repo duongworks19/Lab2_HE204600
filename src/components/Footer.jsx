@@ -9,7 +9,6 @@ import { FaShoppingCart, FaEnvelope, FaGithub, FaLinkedin, FaIdCard } from 'reac
 function Footer() {
     return (
         <footer className="site-footer">
-            {/* Top footer bar using Navbar as a branded strip */}
             <Navbar className="footer-top-bar" expand={false}>
                 <Container>
                     <Navbar.Brand className="footer-brand">
@@ -22,11 +21,9 @@ function Footer() {
                 </Container>
             </Navbar>
 
-            {/* Main footer content */}
             <Container className="footer-main">
                 <Row className="gy-4 align-items-start">
 
-                    {/* About column */}
                     <Col xs={12} md={4}>
                         <h6 className="footer-col-title">About This Project</h6>
                         <p className="footer-text">
@@ -61,7 +58,6 @@ function Footer() {
                         </div>
                     </Col>
 
-                    {/* Quick links column */}
                     <Col xs={12} md={4}>
                         <h6 className="footer-col-title">Quick Links</h6>
                         <ul className="footer-links">

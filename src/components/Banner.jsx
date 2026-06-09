@@ -51,15 +51,12 @@ function PromoCarousel() {
             >
                 {slides.map((slide, idx) => (
                     <Carousel.Item key={idx}>
-                        {/* Background image fills the banner */}
                         <div
                             className="banner-slide"
                             style={{ backgroundImage: `url(${slide.img})` }}
                         >
-                            {/* Gradient overlay */}
                             <div className="banner-overlay" />
 
-                            {/* Content */}
                             <div className="banner-content">
                                 <span className={`promo-badge ${slide.badgeClass}`}>
                                     {slide.badge}

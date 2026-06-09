@@ -17,14 +17,12 @@ function ProductCard({ product, onAddToCart }) {
 
     return (
         <div className="product-card">
-            {/* Status badge */}
             <div className="product-status-badge">
                 <Badge bg={isInStock ? 'success' : 'secondary'}>
                     {status}
                 </Badge>
             </div>
 
-            {/* Product image */}
             <div className="product-img-wrap">
                 <img src={image} alt={name} className="product-img" />
                 <div className="product-img-overlay">
@@ -32,7 +30,6 @@ function ProductCard({ product, onAddToCart }) {
                 </div>
             </div>
 
-            {/* Info */}
             <div className="product-info">
                 <h6 className="product-name">{name}</h6>
                 <p className="product-desc">{description}</p>
